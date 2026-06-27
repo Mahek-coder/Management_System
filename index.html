@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Management System</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #22c55e;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #020617, #1e293b);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 16px;
+      opacity: 0.9;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      background: rgba(17, 24, 39, 0.85);
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      margin-top: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin: 0 0 12px;
+    }
+
+    .hero p { color: var(--muted); }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: #052e16;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .panel {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .stat h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .stat p { margin: 0; color: var(--muted); }
+
+    form {
+      margin-top: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+    }
+
+    button {
+      background: #2563eb;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Management System</h2>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Welcome to your sample dashboard</h1>
+        <p>Track tasks, monitor progress, and stay organized with a clean and simple management interface.</p>
+        <a class="btn" href="#">Get Started</a>
+      </div>
+      <div class="panel">
+        <h3>Quick Overview</h3>
+        <p>Here is a simple example of a management dashboard layout.</p>
+        <ul>
+          <li>3 active projects</li>
+          <li>12 pending tasks</li>
+          <li>85% team completion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <h3>Projects</h3>
+        <p>8 total</p>
+      </div>
+      <div class="stat">
+        <h3>Tasks</h3>
+        <p>24 this week</p>
+      </div>
+      <div class="stat">
+        <h3>Employees</h3>
+        <p>15 active</p>
+      </div>
+    </section>
+
+    <form>
+      <h3>Add a New Task</h3>
+      <input type="text" placeholder="Task title" />
+      <textarea rows="4" placeholder="Task description"></textarea>
+      <button type="submit">Save Task</button>
+    </form>
+  </div>
+</body>
+</html>
